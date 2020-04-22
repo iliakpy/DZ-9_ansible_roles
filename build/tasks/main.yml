@@ -1,5 +1,5 @@
 ---
-# clone and build boxfuse
+# clone and build boxfuse to /var/boxfuse
 - name: Ensure maven and git package is present
   apt: name={{item}} state=present
   with_items:
