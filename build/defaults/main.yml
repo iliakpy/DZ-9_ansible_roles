@@ -1,0 +1,4 @@
+---
+# path to clone the boxfuse repository
+dest_path: /var/boxfuse
+repo_link: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git

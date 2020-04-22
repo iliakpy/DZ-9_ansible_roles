@@ -1,0 +1,14 @@
+---
+# Install tomcat8 and sync artefact
+- name: Ensure tomcat is present
+  apt:
+          name: tomcat8
+          state: present
+- name: Ensure tomcat service is started
+  service:
+          name: tomcat8
+          state: started
+- name: synchronization_app
+  synchronize: src={{ sync_folder }}/hello-1.0.war dest={{ webapp_path }}
+  notify:
+          - restart tomcat

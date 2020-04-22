@@ -1,0 +1,4 @@
+---
+# Path to tomcat webapp folder
+webapp_path: /var/lib/tomcat8/webapps
+sync_folder: /var/boxfuse/target

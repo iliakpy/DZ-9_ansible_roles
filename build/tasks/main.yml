@@ -1,0 +1,24 @@
+---
+# clone and build boxfuse
+- name: Ensure git package is present
+  apt:
+          name: git
+          state: present
+- name: Clone boxfuse repository
+  git:
+          repo: {{ repo_link }}
+          dest: {{ dest_path }}
+  - debug:
+          msg:
+                  - "cloning completed successfully"
+- name: Ensure maven package is present
+  apt:
+          name: maven
+          state: present
+- name: assembly_App
+  shell: "mvn package"
+  args:
+          chdir: {{ dest_path }}
+  - debug:
+          msg:
+                  - "Successfully build"

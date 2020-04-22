@@ -1,0 +1,13 @@
+---
+- name: Build boxfuse app
+  hosts: build
+  become: yes
+
+  roles:
+          - build
+- name: Start boxfuse app
+  hosts: web
+  become: yes
+
+  roles:
+          - web
