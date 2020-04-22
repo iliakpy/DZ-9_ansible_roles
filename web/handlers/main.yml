@@ -1,4 +1,4 @@
 ---
-# Restart tomcat
+# Restart tomcat if change webapp directory
 - name: restart tomcat
   service: name=tomcat8 state=restarted
